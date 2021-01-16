@@ -1,0 +1,72 @@
+/* for app.js style to change color */
+/* :root{
+    --primary-color: '#EAEAEA',
+    --text-color: '#949494',
+} */
+
+/* for main.js style to change color */
+:root {
+  --primary-color: #eaeaea;
+  --text-color: #121212;
+}
+
+[data-theme='dark'] {
+  --primary-color: #262859;
+  --text-color: #f4f4f4;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+p,
+h1 {
+  color: var(--text-color);
+}
+
+#techoscape-logo {
+  filter: invert(1);
+  width: 25vw;
+}
+
+#theme-btn {
+  margin: 0 1rem;
+  background-color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#theme-btn img {
+  width: 25px;
+}
+
+h1,
+p {
+  color: var(--text-color);
+}
+
+.input-group-append .btn-send {
+  background-color: #5357a5;
+}
+
+.input-group-append img {
+  width: 15px;
+  filter: invert(1);
+}
+
+#illus {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
