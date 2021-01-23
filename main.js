@@ -75,3 +75,10 @@ submitForm.onsubmit = function (e) {
 const closeAlert = () => {
   session.hide('slow');
 };
+
+if (/Mobi/i.test(navigator.userAgent)) {
+  $('html').css({ overflow: 'auto' });
+  $('body').css({ height: 'auto' });
+  $('body').css({ overflow: 'auto' });
+  $('.scrollable').css({ position: 'inherit' });
+}
