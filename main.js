@@ -38,47 +38,10 @@ const changeTheme = (e) => {
   }
 };
 
-const submitForm = document.getElementById('submit-form');
-const session = $('.session');
-
 submitForm.onsubmit = function (e) {
-  const message = $('#message');
-  const formData = {
-    email: $('input[name=email]').val(),
-  };
-  $.ajax({
-    type: 'POST',
-    url: '/api/subscribe',
-    data: formData,
-    dataType: 'json',
-    encode: true,
-    success: function (data, text) {
-      message.html(data.message);
-      session.fadeOut(100, function () {
-        session.addClass('success');
-      });
-      session.removeClass('error');
-      session.show('slow');
-    },
-    error: function (request, status, error) {
-      message.html(request.responseJSON.message);
-      session.fadeOut(100, function () {
-        session.addClass('error');
-      });
-      session.removeClass('success');
-      session.show('slow');
-    },
-  });
   e.preventDefault();
 };
 
 const closeAlert = () => {
   session.hide('slow');
 };
-
-// if (/Mobi/i.test(navigator.userAgent)) {
-//   $('html').css({ overflow: 'auto' });
-//   $('body').css({ height: 'auto' });
-//   $('body').css({ overflow: 'auto' });
-//   $('.scrollable').css({ position: 'inherit' });
-// }

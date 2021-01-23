@@ -1,19 +1,19 @@
-/* @font-face {
-  font-family: 'PaytoneOne';
-  src: url(../fonts/PaytoneOne-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url(../fonts/Inter.ttf);
-} */
-
 :root {
   --primary-color: #eaeaea;
   --text-color: #121212;
   --secondary-color: #5357a5;
   --white: #fff;
   --red: #ec7774;
+}
+
+@font-face {
+  font-family: 'PaytoneOne';
+  src: url('Asset/PaytoneOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Asset/Inter.ttf');
 }
 
 [data-theme='dark'] {
