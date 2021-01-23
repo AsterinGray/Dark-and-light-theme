@@ -33,7 +33,6 @@ body {
   height: 100vh;
   background-color: var(--primary-color);
   transition: all ease 0.3s;
-  overflow: auto;
   height: auto;
 }
 
