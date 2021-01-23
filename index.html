@@ -6,45 +6,110 @@
     <title>Technoscape</title>
     <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      if (localStorage.getItem('theme') == 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    </script>
   </head>
   <body>
-    <div class="container">
-      <div class="d-flex justify-content-center my-5">
-        <img class="w-50" src="Asset/illus.svg" id="illus" alt="" />
-      </div>
-      <div class="d-flex justify-content-center align-items-center">
-        <div>
-          <img
-            src="Asset/TechnoScape_Horizontal_W.png"
-            id="techoscape-logo"
-            alt=""
-          />
-        </div>
-        <label for="theme-inp" id="theme-btn">
-          <img id="theme-img" src="Asset/moon.svg" alt="" />
-        </label>
-        <input
-          type="checkbox"
-          class="d-none"
-          id="theme-inp"
-          onclick="changeTheme(this)"
-        />
-      </div>
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1>Coming Soon</h1>
-        <p>
-          Your trip to the moon is coming very soon. Wait for us! Subscribe to
-          our mailing list to get notified when we launch.
-        </p>
-        <div class="input-group d-flex justify-content-center">
-          <form action="" class="d-flex">
-            <input type="text" class="form-control" />
-            <div class="input-group-append">
-              <button class="btn btn-send" type="submit">
-                <img src="Asset/send mail.svg" alt="" />
-              </button>
+    <div class="session w-100">
+      <span onclick="closeAlert()" id="btn-close">&times;</span>
+      <span id="message"></span>
+    </div>
+    <div class="coming-soon">
+      <div class="container">
+        <div class="coming-soon-illustration">
+          <div
+            class="row illustration justify-content-center align-items-center"
+          >
+            <img
+              id="left-illus"
+              class="col-4"
+              src="Asset/illus/left.svg"
+              alt=""
+            />
+            <img
+              id="mid-illus"
+              class="col-4"
+              src="Asset/illus/middle.svg"
+              alt=""
+            />
+            <img
+              id="right-illus"
+              class="col-4"
+              src="Asset/illus/right.svg"
+              alt=""
+            />
+          </div>
+          <div class="row">
+            <div
+              class="d-flex col-12 justify-content-center align-items-center"
+            >
+              <img
+                src="./Asset/TechnoScape_Horizontal_B.png"
+                id="technoscape-logo"
+                alt="technoscape-logo"
+              />
+              <label class="" for="theme-inp" id="theme-btn">
+                <img id="theme-img" src="Asset/moon.svg" alt="" />
+              </label>
+              <input
+                type="checkbox"
+                class="d-none"
+                id="theme-inp"
+                onclick="changeTheme(this)"
+              />
             </div>
-          </form>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <h1 class="coming-soon-title">COMING SOON</h1>
+            <p class="coming-soon-content">
+              Your trip to the moon is coming very soon. Wait for us!
+              <br />
+              Subscribe to our mailing list to get notified when we launch.
+            </p>
+            <form id="submit-form" method="POST" class="d-flex">
+              <div class="input-group d-flex justify-content-center">
+                <input
+                  type="text"
+                  name="email"
+                  class="form-control"
+                  placeholder="Leave your email here"
+                  required
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-send" type="submit">
+                    <img src="Asset/send mail.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="row social-media" id="social-media">
+            <a
+              class="col-4"
+              href="https://www.instagram.com/technoscapebncc/"
+              target="_blank"
+              ><img class="d-block" src="Asset/instagram.svg" alt="instagram"
+            /></a>
+            <a
+              class="col-4"
+              href="https://www.youtube.com/watch?v=EjspPVMznkE"
+              target="_blank"
+              ><img src="Asset/youtube.svg" alt="youtube"
+            /></a>
+            <a
+              class="col-4"
+              href="https://www.linkedin.com/company/bina-nusantara-computer-club/"
+              target="_blank"
+              ><img src="Asset/linkedin.svg" alt="linkedin"
+            /></a>
+          </div>
         </div>
       </div>
     </div>
